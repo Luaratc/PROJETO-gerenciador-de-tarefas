@@ -41,7 +41,38 @@
 
         <button type="submit">Adicionar Tarefa</button>
     </form>
+    
+    <h2>Minhas Tarefas</h2>
 
+    <div class="indicadores">
+        <h4>Total de tarefas: <span id="total-tarefas">0</span></h4>
+        <h4>Tarefas Pendentes: <span id="total-pendentes">0</span></h4>
+        <h4>Tarefas Concluídas: <span id="total-concluidas">0</span></h4>
+    </div>
+
+    <div class="filtros">
+        <h3>Filtrar Tarefas</h3>
+
+        <label for="filtro-status">Situação:</label>
+        <select id="filtro-status">
+            <option value="Todas">Todas</option>
+            <option value="Pendentes">Pendentes</option>
+            <option value="Concluidas">Concluídas</option>
+        </select>
+
+        <label for="filtro-categoria">Categoria:</label>
+        <select id="filtro-categoria">
+            <option value="Todas">Todas</option>
+            <option value="Trabalho">Trabalho</option>
+            <option value="Pessoal">Pessoal</option>
+            <option value="Estudos">Estudos</option>
+            <option value="Casa">Casa</option>
+            <option value="Saude">Saúde</option>
+            <option value="Lazer">Lazer</option>
+            <option value="Outros">Outros</option>
+        </select>
+    </div>
+    <div id="lista-tarefas"></div>
     <script src="js/script.js"></script>
 </body>
 </html>
