@@ -4,7 +4,7 @@ const filtroStatus = document.getElementById("filtro-status");
 const filtroCategoria = document.getElementById("filtro-categoria");
 const totalTarefas = document.getElementById("total-tarefas");
 const totalPendentes= document.getElementById("total-pendentes");
-const totalConcluidas = getElementById("total=concluidas");
+const totalConcluidas = document.getElementById("total-concluidas");
 
 function atualizarIndicadores(){
     const total= tarefas.length;
@@ -23,7 +23,7 @@ function atualizarIndicadores(){
     }
     totalTarefas.textContent=total;
     totalConcluidas.textContent=concluidas;
-    tarefasPendentes.textContent=pendentes;
+    totalPendentes.textContent=pendentes;
 
 }
 
@@ -97,6 +97,7 @@ function exibirTarefas() {
 
             botaoConcluir.addEventListener("click", function () {
                 tarefa.concluida = true;
+                salvarTarefas();
                 exibirTarefas();
             })
             item.appendChild(botaoConcluir);
@@ -109,6 +110,7 @@ function exibirTarefas() {
 
             botaoDesfazer.addEventListener("click", function () {
                 tarefa.concluida = false;
+                salvarTarefas();
                 exibirTarefas();
             })
             item.appendChild(botaoDesfazer);
@@ -121,6 +123,7 @@ function exibirTarefas() {
             const posicaoReal= tarefas.indexOf(tarefa);
             if(posicaoReal >= 0){
                 tarefas.splice(posicaoReal,1);
+                salvarTarefas();
                 exibirTarefas();
             }
         })
@@ -130,7 +133,11 @@ function exibirTarefas() {
 }
 
 
-let tarefas = [];
+let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
+function salvarTarefas(){
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
+}
+
 filtroCategoria.addEventListener("change", exibirTarefas);
 filtroStatus.addEventListener("change", exibirTarefas);
 
@@ -149,7 +156,9 @@ formulario.addEventListener('submit', function (event) {
         concluida: false
     }
 
-    tarefas.push(tarefa);
-    exibirTarefas();
+    tarefas.push(tarefa); //guarda nova tarefa
+    salvarTarefas();//salva ela
+    exibirTarefas();//exibe na tela
     console.log(tarefas);
 });
+exibirTarefas();
