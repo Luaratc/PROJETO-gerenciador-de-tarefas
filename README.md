@@ -4,8 +4,8 @@ Este projeto consiste em uma aplicação web para cadastrar, organizar e acompan
 O objetivo é facilitar a organização das atividades, permitindo visualizar quais tarefas estão pendentes e quais já foram concluídas.
 
 ## Funcionalidades
-— Cadastrar tarefas com descrição, categoria, prioridade e data.
-— Visualizar a lista de tarefas cadastradas.
+- Cadastrar tarefas com descrição, categoria, prioridade e data.
+- Visualizar a lista de tarefas cadastradas.
 — Marcar tarefas como concluídas ou pendentes novamente.
 — Excluir tarefas.
 — Filtrar tarefas por status e categoria.
