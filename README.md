@@ -6,17 +6,17 @@ O objetivo é facilitar a organização das atividades, permitindo visualizar qu
 ## Funcionalidades
 - Cadastrar tarefas com descrição, categoria, prioridade e data.
 - Visualizar a lista de tarefas cadastradas.
-— Marcar tarefas como concluídas ou pendentes novamente.
-— Excluir tarefas.
-— Filtrar tarefas por status e categoria.
-— Visualizar indicadores com a quantidade de tarefas.
-— Salvar as tarefas no navegador utilizando localStorage.
+- Marcar tarefas como concluídas ou pendentes novamente.
+- Excluir tarefas.
+- Filtrar tarefas por status e categoria.
+- Visualizar indicadores com a quantidade de tarefas.
+- Salvar as tarefas no navegador utilizando localStorage.
 
 ## Tecnologias utilizadas
-— HTML5
-— CSS3
-— JavaScript
-— localStorage
+- HTML5
+- CSS3
+- JavaScript
+- localStorage
 
 ## Objetivo
 Projeto pessoal desenvolvido para praticar e aprimorar conhecimentos em desenvolvimento Front-end.
